@@ -2,10 +2,11 @@ public abstract class Jedi implements EroErzekeny {
     private double ero;
     private boolean atallhatE;
 
-    Jedi(double ero, boolean atallhatE) {
+    public Jedi(double ero, boolean atallhatE) {
         this.ero = ero;
         this.atallhatE = atallhatE;
     }
+
 
     public abstract boolean megteremtiAzEgyensulyt();
 
@@ -14,18 +15,17 @@ public abstract class Jedi implements EroErzekeny {
         return ero;
     }
 
-    @Override
-    public boolean legyoziE(EroErzekeny eroErzekeny) {
-        if (eroErzekeny instanceof Jedi) {
-            Jedi jedi = (Jedi) eroErzekeny;
-            if (atallhatE && jedi.atallhatE) {
-                return jedi.ero < this.ero;
-// Uralkodo objektum legyozese hianyzik
+    public boolean legyoziE(EroErzekeny ellenseg) {
+        if (ellenseg instanceof Jedi jedi) {
+            if (ellenseg instanceof Uralkodo uralkodo) {
+                return atallhatE && jedi.atallhatE && jedi.ero > uralkodo.getGonoszsag() * 2; // Uralkodo legyőzése
+            } else {
+                return atallhatE && jedi.atallhatE && jedi.ero < this.ero; // Jedi legyőzése
             }
         }
         return false;
-
     }
+
 
     public double getEro() {
         return ero;
