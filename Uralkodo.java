@@ -5,8 +5,7 @@ public class Uralkodo implements EroErzekeny,Sith{
     }
     @Override
     public boolean legyoziE(EroErzekeny ellenseg) {
-        double uralkodoEro = getGonoszsag() * 2;
-        return ellenseg.mekkoraAzEreje() < uralkodoEro;
+        return ellenseg.mekkoraAzEreje() < this.gonoszsag;
     }
 
     @Override
@@ -31,7 +30,6 @@ public class Uralkodo implements EroErzekeny,Sith{
     @Override
     public String toString() {
         return "Uralkodo{" +
-                "gonoszsag=" + gonoszsag +
-                '}';
+                "gonoszsag=" + gonoszsag ;
     }
 }
