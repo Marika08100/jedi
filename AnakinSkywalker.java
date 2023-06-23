@@ -1,8 +1,8 @@
 import java.util.Random;
 
 public class AnakinSkywalker extends Jedi implements Sith {
-    AnakinSkywalker(double ero, boolean atallhatE) {
-        super(ero = 150, atallhatE = true);
+    AnakinSkywalker() {
+        super( 150,  true);
     }
 
     @Override

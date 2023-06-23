@@ -45,9 +45,7 @@ public abstract class Jedi implements EroErzekeny {
 
     @Override
     public String toString() {
-        return "Jedi{" +
-                "ero=" + ero +
-                ", atallhatE=" + atallhatE +
-                '}';
+        return "erő=" + ero +
+                ", átállhat-e=" + atallhatE ;
     }
 }

@@ -1,6 +1,6 @@
 public class StarWars {
     public static void main(String[] args) {
-        Jedi anakinSkywalker = new AnakinSkywalker(1500, true);
+        Jedi anakinSkywalker = new AnakinSkywalker();
         System.out.println("Anakin Skywalker ereje: " + anakinSkywalker.mekkoraAzEreje());
         System.out.println("Megteremti az egyensúlyt? " + anakinSkywalker.megteremtiAzEgyensulyt());
 
